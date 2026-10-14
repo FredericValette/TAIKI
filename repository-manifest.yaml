@@ -1,0 +1,37 @@
+repository:
+
+  name: taiki-platform
+
+  version: 1.0.0
+
+  domains:
+
+    - software-landscape-assessment
+    - architecture-discovery
+    - visual-testing-playwright
+    - agentic-test-automation
+    - release-readiness-dqa
+    - technology-radar
+    - skill-gap-analysis
+    - security-by-design
+    - performance-capacity-analytics
+    - ticket-intelligence
+    - executive-engineering-copilot
+
+  controller:
+
+    enabled: true
+
+  metricsdb:
+
+    enabled: true
+
+  dashboards:
+
+    grafana: true
+    powerbi: true
+    metabase: true
+
+  ci:
+
+    github_actions: true
