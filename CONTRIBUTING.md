@@ -31,4 +31,3 @@ Every skill must contain:
 - prompts/
 - schemas/
 - examples/
-``

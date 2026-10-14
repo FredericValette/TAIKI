@@ -14,11 +14,19 @@ jobs:
 
       - uses: actions/checkout@v4
 
-      - name: Validate JSON Schemas
-        run: echo "validate"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-      - name: Validate Markdown
-        run: echo "markdown lint"
+      - name: Install test dependencies
+        run: python -m pip install -r requirements-dev.txt
 
-      - name: Validate Skills
-        run: echo "skill validation"
+      - name: Validate skill package structure
+        run: python scripts/validate_skills.py
+
+      - name: Run test suites
+        run: |
+          python -m unittest discover -s tests/controller-tests -p "test_*.py"
+          python -m unittest discover -s tests/schema-tests -p "test_*.py"
+          python -m unittest discover -s tests/skill-tests -p "test_*.py"
+          python -m unittest discover -s tests/integration-tests -p "test_*.py"

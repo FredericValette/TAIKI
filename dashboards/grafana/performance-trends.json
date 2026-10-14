@@ -5,7 +5,7 @@
   "id": null,
   "panels": [
     {
-      "datasource": { "type": "frser-sqlite-datasource", "uid": "${DS_TAIKI_METRICS}" },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "taiki-metrics" },
       "fieldConfig": { "defaults": {}, "overrides": [] },
       "gridPos": { "h": 9, "w": 24, "x": 0, "y": 0 },
       "id": 1,

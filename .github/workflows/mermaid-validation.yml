@@ -1,0 +1,23 @@
+name: Validate Mermaid Diagrams
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  diagrams:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Render Mermaid diagrams
+        run: |
+          for diagram in docs/diagrams/*.mmd; do
+            output="${RUNNER_TEMP}/$(basename "${diagram}" .mmd).svg"
+            npx --yes --package @mermaid-js/mermaid-cli mmdc --input "${diagram}" --output "${output}"
+          done

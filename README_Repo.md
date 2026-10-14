@@ -1,19 +1,25 @@
 # TAIKI Platform
+
 Enterprise Quality Engineering Framework
 
 ## Components
+
 11 AI Skills
 Controller Agent
 MetricsDB
 Quality Gates
 Executive Governance
 Evidence Management
+
 ## Quality Gate Decisions
+
 GO
 CONDITIONAL_GO
 NO_GO
 NOT_ASSESSABLE
+
 ## Supported Reports
+
 Test Assessment
 Architecture Review
 Security Review
@@ -68,9 +74,9 @@ controller/
 │   ├── action.schema.json
 │   └── evidence.schema.json
 └── policies/
-	├── quality-gate-policy.md
-	├── confidence-model.md
-	└── decision-rules.md
+ ├── quality-gate-policy.md
+ ├── confidence-model.md
+ └── decision-rules.md
 ```
 
 ### Skill-Library
@@ -183,13 +189,13 @@ GitHub-README-Dateien übernehmen kein benutzerdefiniertes CSS. Für HTML-Report
 
 ```css
 a {
-	text-decoration: none;
-	color: #464feb;
+ text-decoration: none;
+ color: #464feb;
 }
 tr th, tr td {
-	border: 1px solid #e6e6e6;
+ border: 1px solid #e6e6e6;
 }
 tr th {
-	background-color: #f5f5f5;
+ background-color: #f5f5f5;
 }
 ```
