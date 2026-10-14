@@ -1,0 +1,5 @@
+{
+  "scope": "Checkout flow at desktop and mobile viewports",
+  "context": { "url": "http://localhost:3000/checkout", "viewports": ["1440x900", "390x844"] },
+  "constraints": ["Do not update visual baselines without approval"]
+}

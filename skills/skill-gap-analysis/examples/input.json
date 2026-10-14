@@ -1,0 +1,5 @@
+{
+  "scope": "Team capability needs for the next two quarterly delivery cycles",
+  "context": { "roles": ["platform engineering", "quality engineering"], "capabilities": ["observability", "test automation"] },
+  "constraints": ["Report at team level and exclude sensitive personal data"]
+}

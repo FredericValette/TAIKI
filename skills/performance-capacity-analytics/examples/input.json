@@ -1,0 +1,5 @@
+{
+  "scope": "Checkout API throughput and latency at seasonal peak load",
+  "context": { "window": "2026-10-01T00:00:00Z/2026-10-08T00:00:00Z", "objectives": ["p95 latency < 400 ms"] },
+  "constraints": ["Do not extrapolate capacity beyond the tested load without stating assumptions"]
+}

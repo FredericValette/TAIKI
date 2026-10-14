@@ -1,0 +1,5 @@
+{
+  "scope": "Evaluate managed container platforms for new internal services",
+  "context": { "candidates": ["platform A", "platform B"], "horizon_months": 24 },
+  "constraints": ["Must support existing identity and audit controls"]
+}

@@ -1,21 +1,32 @@
 name: Release
 
 on:
+  push:
+    tags:
+      - "v*"
   workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing version tag to publish, for example v1.0.0
+        required: true
+        type: string
+
+permissions:
+  contents: write
 
 jobs:
-
   package:
-
     runs-on: ubuntu-latest
-
     steps:
-
       - uses: actions/checkout@v4
-
-      - name: Package Skills
-        run: echo package
-
-      - name: Publish Release
-        run: echo publish
-``
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+      - name: Package skills
+        run: |
+          mkdir -p dist
+          zip -r dist/taiki-skills.zip skills controller/schemas
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+        run: gh release create "$RELEASE_TAG" dist/taiki-skills.zip --verify-tag --generate-notes

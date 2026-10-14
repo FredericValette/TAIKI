@@ -1,0 +1,10 @@
+flowchart TD
+    Start[Assessment received] --> Evidence{Mandatory evidence complete?}
+    Evidence -->|No or stale| NA[NOT_ASSESSABLE]
+    Evidence -->|Yes| Failure{Mandatory gate failed?}
+    Failure -->|Yes| NoGo[NO_GO]
+    Failure -->|No| Critical{Unresolved critical risk?}
+    Critical -->|Yes| NoGo
+    Critical -->|No| Conditional{Non-blocking actions remain?}
+    Conditional -->|Yes| ConditionalGo[CONDITIONAL_GO]
+    Conditional -->|No| Go[GO]

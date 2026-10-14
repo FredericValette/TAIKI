@@ -1,0 +1,5 @@
+{
+  "scope": "Design review for the public document upload API",
+  "context": { "data_classification": "confidential", "artifacts": ["API specification", "deployment diagram"] },
+  "constraints": ["Review design evidence only; do not claim penetration-test coverage"]
+}

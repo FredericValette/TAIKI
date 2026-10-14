@@ -1,0 +1,8 @@
+erDiagram
+    CONTROLLER_RUNS ||--o{ PROCESSING_STAGES : contains
+    CONTROLLER_RUNS ||--o{ RUN_METRICS : measures
+    PROCESSING_STAGES o|--o{ RUN_METRICS : emits
+    CONTROLLER_RUNS ||--o{ EVIDENCE : records
+    CONTROLLER_RUNS ||--o{ RISKS : identifies
+    CONTROLLER_RUNS ||--o{ ACTIONS : tracks
+    RISKS o|--o{ ACTIONS : mitigated_by

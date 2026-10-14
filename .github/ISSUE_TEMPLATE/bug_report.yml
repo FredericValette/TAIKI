@@ -1,0 +1,31 @@
+name: Bug report
+description: Report a reproducible defect in TAIKI artifacts or behavior.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include credentials, personal data, or confidential production information.
+  - type: input
+    id: artifact
+    attributes:
+      label: Affected artifact
+      description: Skill, schema, workflow, or document and version/commit.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized logs or evidence

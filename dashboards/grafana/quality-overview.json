@@ -1,0 +1,27 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "graphTooltip": 0,
+  "id": null,
+  "panels": [
+    {
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "taiki-metrics" },
+      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "gridPos": { "h": 9, "w": 24, "x": 0, "y": 0 },
+      "id": 1,
+      "options": { "showHeader": true },
+      "targets": [{ "format": "table", "rawSql": "SELECT decision, COUNT(*) AS run_count FROM controller_runs GROUP BY decision ORDER BY decision", "refId": "A" }],
+      "title": "Runs by quality-gate decision",
+      "type": "table"
+    }
+  ],
+  "refresh": "5m",
+  "schemaVersion": 39,
+  "tags": ["taiki", "quality"],
+  "templating": { "list": [] },
+  "time": { "from": "now-30d", "to": "now" },
+  "timezone": "browser",
+  "title": "TAIKI Quality Overview",
+  "uid": "taiki-quality-overview",
+  "version": 1
+}

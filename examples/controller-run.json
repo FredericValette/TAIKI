@@ -1,0 +1,42 @@
+{
+  "runId": "run-2026-10-14-001",
+  "skillId": "release-readiness-dqa",
+  "startedAt": "2026-10-14T09:00:00Z",
+  "completedAt": "2026-10-14T09:05:00Z",
+  "status": "completed",
+  "decision": "CONDITIONAL_GO",
+  "confidence": 0.88,
+  "evidence": [
+    {
+      "evidenceId": "ev-regression-001",
+      "kind": "test_result",
+      "source": "CI run 4812",
+      "observedAt": "2026-10-14T08:55:00Z",
+      "summary": "Regression suite passed",
+      "confidence": 0.96,
+      "limitations": []
+    }
+  ],
+  "risks": [
+    {
+      "riskId": "risk-rollback-001",
+      "title": "Rollback rehearsal incomplete",
+      "severity": "medium",
+      "likelihood": "possible",
+      "status": "mitigating",
+      "owner": "release-engineering",
+      "mitigation": "Complete rehearsal before broad rollout"
+    }
+  ],
+  "actions": [
+    {
+      "actionId": "act-rollback-001",
+      "title": "Complete rollback rehearsal",
+      "priority": "high",
+      "status": "open",
+      "owner": "release-engineering",
+      "dueDate": "2026-10-16",
+      "relatedRiskId": "risk-rollback-001"
+    }
+  ]
+}
