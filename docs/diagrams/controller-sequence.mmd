@@ -1,0 +1,10 @@
+sequenceDiagram
+    actor User
+    participant Skill
+    participant Controller
+    participant Store as MetricsDB
+    User->>Skill: Submit scoped assessment
+    Skill->>Controller: Findings, risks, evidence
+    Controller->>Controller: Validate contracts and policy
+    Controller->>Store: Persist run and evidence
+    Controller-->>User: Decision and actions

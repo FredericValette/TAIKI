@@ -1,0 +1,9 @@
+flowchart LR
+    User[Engineering user] --> Skills[Engineering skills]
+    Skills --> Controller[Controller agent]
+    Controller --> Schemas[JSON contracts]
+    Controller --> Evidence[Evidence pack]
+    Evidence --> MetricsDB[(MetricsDB)]
+    MetricsDB --> Dashboards[Grafana dashboards]
+    Controller --> Gates[Quality gates]
+    Gates --> Report[Decision report]

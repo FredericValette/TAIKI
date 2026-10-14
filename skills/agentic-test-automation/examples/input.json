@@ -1,0 +1,5 @@
+{
+  "scope": "Regression checks for payment retry behavior",
+  "context": { "requirements": ["REQ-PAY-01", "REQ-PAY-02"], "environment": "test" },
+  "constraints": ["Use isolated test accounts and do not trigger real payments"]
+}

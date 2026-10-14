@@ -1,0 +1,5 @@
+{
+  "scope": "Triage the open reliability tickets for the platform team",
+  "context": { "ticket_ids": ["OPS-101", "OPS-102"], "taxonomy": ["bug", "incident", "improvement"] },
+  "constraints": ["Recommend changes only; do not modify or close tickets"]
+}

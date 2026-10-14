@@ -1,0 +1,5 @@
+{
+  "scope": "Customer portal services and production runtimes",
+  "context": { "evaluation_date": "2026-10-14", "sources": ["service catalog", "dependency manifests"] },
+  "constraints": ["Do not infer versions when manifests are unavailable"]
+}

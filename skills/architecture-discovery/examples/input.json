@@ -1,0 +1,5 @@
+{
+  "scope": "Order processing service architecture",
+  "context": { "artifacts": ["source repositories", "deployment manifests", "service catalog"] },
+  "constraints": ["Separate observed components from inferred dependencies"]
+}

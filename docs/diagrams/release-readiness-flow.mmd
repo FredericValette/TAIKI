@@ -1,0 +1,9 @@
+flowchart LR
+    Scope[Release scope and gates] --> Collect[Collect dated evidence]
+    Collect --> Validate[Validate coverage and freshness]
+    Validate --> Assess[Assess risks and gate results]
+    Assess --> Decision{Controller decision}
+    Decision -->|GO| Approve[Ready to proceed]
+    Decision -->|CONDITIONAL_GO| Actions[Track conditions and owners]
+    Decision -->|NO_GO| Block[Resolve blocking findings]
+    Decision -->|NOT_ASSESSABLE| Missing[Collect missing evidence]

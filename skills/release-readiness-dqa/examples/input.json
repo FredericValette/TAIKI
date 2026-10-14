@@ -1,0 +1,5 @@
+{
+  "scope": "Release 2026.10 readiness for the customer portal",
+  "context": { "release_id": "2026.10", "mandatory_gates": ["security", "regression", "rollback"] },
+  "constraints": ["Missing mandatory evidence must produce NOT_ASSESSABLE or NO_GO"]
+}

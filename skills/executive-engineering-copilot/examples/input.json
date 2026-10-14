@@ -1,0 +1,5 @@
+{
+  "scope": "Summarize engineering readiness and top delivery risks for the quarterly review",
+  "context": { "audience": "executive leadership", "reporting_date": "2026-10-14" },
+  "constraints": ["Use validated metrics only and preserve uncertainty"]
+}
